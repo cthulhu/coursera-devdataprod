@@ -1,0 +1,53 @@
+FreeDataSources
+========================================================
+author: Stanislav O. Pogrebnyak
+date: 2015-04-26
+
+Motivation
+========================================================
+
+To test some dependencies and try different data techniques it is very important to have sufficient enough data. You can find a lot of free data sources, clearly showing you particular problem, dependency and prepared to be best source for some solutions. 
+
+
+Some examples of data sources
+========================================================
+
+- http://lib.stat.cmu.edu/DASL/allsubjects.html
+- http://datamob.org/
+- http://www.statsci.org/datasets.html
+- http://www.amstat.org/publications/jse/jse_data_archive.htm
+- http://www.stat.ncsu.edu/research/sas/sicl/data/
+
+Example of data used in project assignment
+========================================================
+
+```{r, echo=FALSE}
+library(knitr)
+d.in = read.csv("data.csv", header = TRUE, sep = ";")
+kable(head(d.in), format = "markdown")
+```
+
+Code for rendering example of data used in project assignment
+========================================================
+
+```{r, echo=TRUE, eval=FALSE}
+library(knitr)
+d.in = read.csv("data.csv", header = TRUE, sep = ";")
+kable(head(d.in), format = "markdown")
+```
+
+Example of rendering in presentation based on free datasets
+========================================================
+
+```{r, echo=FALSE}
+pie(d.in$RedMeat, d.in$Country)
+```
+
+
+Some links
+========================================================
+
+- Course https://class.coursera.org/devdataprod-013
+- Github repository https://github.com/cthulhu/coursera-devdataprod
+- This presentation http://rpubs.com/cthulhu/presentation
+- Shiny application https://cthulhu.shinyapps.io/devdataprod-project/
